@@ -1,6 +1,6 @@
 {
   "name": "sumor",
-  "version": "2.0.0",
+  "version": "1.5.0",
   "main": "src/index.js",
   "type": "module",
   "bin": {
@@ -18,7 +18,13 @@
     "=============automation=============": "",
     "prepare": "husky",
     "pre-commit": "npm run autofix",
-    "pre-push": "npm run test"
+    "pre-push": "npm run test",
+    "=============publish=============": "",
+    "push-tag": "git push && git push --tags",
+    "publish-beta": "npm version prerelease --preid beta && npm run push-tag",
+    "publish-release-patch": "npm version patch && npm run push-tag",
+    "publish-release-minor": "npm version minor && npm run push-tag",
+    "publish-release-major": "npm version major && npm run push-tag"
   },
   "keywords": [],
   "author": "",
