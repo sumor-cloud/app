@@ -6,6 +6,13 @@
   "bin": {
     "sumor": "src/cli.js"
   },
+  "files": [
+    "i18n/",
+    "i18nExt/",
+    "modules/",
+    "src/",
+    "LICENSE"
+  ],
   "scripts": {
     "demo": "cd demo && npm run start",
     "check": "npm run autofix && npm run coverage",
