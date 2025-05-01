@@ -1,0 +1,3 @@
+API_ERROR_SHOW_MORE: 'Mostrar mais detalhes técnicos'
+API_ERROR_UNKNOWN_ERROR: 'Erro de interface, tente novamente mais tarde'
+API_ERROR_UNKNOWN_MESSAGE: 'Erro de interface, informações detalhadas do erro podem ser vistas abaixo. Caminho: {path}'

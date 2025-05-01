@@ -1,0 +1,3 @@
+API_ERROR_SHOW_MORE: 'Show more technical details'
+API_ERROR_UNKNOWN_ERROR: 'Interface error, please try again later'
+API_ERROR_UNKNOWN_MESSAGE: 'Interface error, detailed error information can be found below. Path: {path}'

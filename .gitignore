@@ -1,0 +1,14 @@
+.DS_Store
+
+# IDE configuration
+.idea
+
+# generated files
+node_modules
+output
+tmp
+static
+
+# config
+/config
+/ssl

@@ -1,0 +1,11 @@
+name: File
+methods:
+  - POST
+  - GET
+parameters:
+  file:
+    name: 文件
+    type: file
+    required: true
+  id:
+    name: 上传请求号

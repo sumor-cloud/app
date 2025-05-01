@@ -1,0 +1,2 @@
+LOGIN_EXPIRED: 'Время сеанса истекло'
+PERMISSION_DENIED: 'Доступ запрещен: {permission}'

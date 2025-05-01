@@ -1,0 +1,2 @@
+LOGIN_EXPIRED: 'Oturum süresi doldu'
+PERMISSION_DENIED: 'İzin reddedildi: {permission}'

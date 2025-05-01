@@ -1,0 +1,2 @@
+LOGIN_EXPIRED: 'ログインの有効期限が切れました'
+PERMISSION_DENIED: '権限がありません: {permission}'

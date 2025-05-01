@@ -1,0 +1,2 @@
+LOGIN_EXPIRED: '로그인 만료'
+PERMISSION_DENIED: '권한이 없습니다: {permission}'

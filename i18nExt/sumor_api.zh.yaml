@@ -1,0 +1,3 @@
+API_ERROR_SHOW_MORE: '显示更多技术细节'
+API_ERROR_UNKNOWN_ERROR: '接口异常，请稍后重试'
+API_ERROR_UNKNOWN_MESSAGE: '接口异常，详细错误信息请查看如下。 路径为：{path}'

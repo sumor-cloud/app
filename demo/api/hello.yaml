@@ -1,0 +1,13 @@
+name: Hello
+path:
+  - /hello
+  - /hello/:name
+parameters:
+  name:
+    name: 姓名
+    type: string
+    required: true
+    rules:
+      CHARACTER_LIMIT:
+        expression: '^[a-zA-Z][a-zA-Z0-9_]{0,19}$'
+        message: '姓名只能包含字母、数字和下划线，且不能以数字开头，长度在1-20个字符之间'

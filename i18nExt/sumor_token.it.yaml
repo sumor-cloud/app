@@ -1,0 +1,2 @@
+LOGIN_EXPIRED: 'La sessione è scaduta'
+PERMISSION_DENIED: 'Permesso negato: {permission}'

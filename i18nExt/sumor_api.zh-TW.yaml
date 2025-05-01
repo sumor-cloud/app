@@ -1,0 +1,3 @@
+API_ERROR_SHOW_MORE: '顯示更多技術細節'
+API_ERROR_UNKNOWN_ERROR: '介面異常，請稍後重試'
+API_ERROR_UNKNOWN_MESSAGE: '介面異常，詳細錯誤資訊請參考如下。 路徑為：{path}'

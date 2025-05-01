@@ -1,0 +1,2 @@
+LOGIN_EXPIRED: 'Anmeldung abgelaufen'
+PERMISSION_DENIED: 'Zugriff verweigert: {permission}'

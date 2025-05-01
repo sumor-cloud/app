@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>PLACEHOLDER-TITLE</title>
+    <style>
+      * {
+          box-sizing: border-box;
+          transition: all 0.3s;
+      }
+      body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          font-family: Arial, sans-serif;
+          padding: 50px 0;
+          margin: 0;
+      }
+      h1 {
+          color: #e2583e;
+          user-select: none;
+      // PLACEHOLDER-STYLE-COLOR
+      }
+      p {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          padding: 0 10px;
+          max-width: 600px;
+          width: 100%;
+          text-align: center;
+      }
+      a {
+          color: #1a73e8;
+          text-decoration: none;
+          cursor: pointer;
+      }
+      a:hover {
+          text-decoration: none;
+      }
+      .image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 400px;
+          height: 300px;
+          overflow: hidden;
+          background: rgba(0,0,0,0.05);
+          border-radius: 4px;
+          margin-top: 50px;
+          user-select: none;
+      }
+      img {
+          width: 300px;
+          height: 250px;
+      }
+      .more {
+          padding-top: 50px;
+      }
+      .more-box {
+          display: none;
+          margin-top: 50px;
+          background: rgba(0,0,0,0.05);
+          border-radius: 4px;
+          padding: 10px;
+          overflow: auto;
+          width: 80%;
+          min-width: 400px;
+          max-width: 600px;
+          min-height: 300px;
+          max-height: 400px;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          cursor: zoom-in;
+      }
+
+      .more-box-fullscreen {
+          width: 100vw;
+          height: 100vh;
+          position: fixed;
+          z-index: 1000;
+          background: #f9f9f9;
+          left: 0;
+          top: 0;
+          margin: 0;
+          max-width: inherit;
+          max-height: inherit;
+          cursor: zoom-out;
+      }
+
+      @media (prefers-color-scheme: dark) {
+          body {
+              background-color: #1e1e1e;
+              color: #f9f9f9;
+          }
+          h1 {
+              color: #ff6f61;
+          // PLACEHOLDER-STYLE-COLOR
+          }
+          a {
+              color: #8ab4f8;
+          }
+          .image {
+              background: rgba(255, 255, 255, 0.3);
+          }
+          .more-box {
+              background: rgba(255, 255, 255, 0.1);
+          }
+          .more-box-fullscreen {
+              background: #1e1e1e;
+          }
+      }
+      @media screen and (max-width: 400px) {
+          p {
+              width: 100%;
+          }
+          .image{
+              border-radius: 0;
+              margin: 0;
+              background: transparent;
+          }
+          .more-box {
+              width: calc(100% - 20px);
+              height: fit-content;
+              min-height: inherit;
+              max-height: inherit;
+              max-width: inherit;
+              min-width: inherit;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PLACEHOLDER-MAJOR</h1>
+    PLACEHOLDER-MINOR
+    <div class="image"><img src="PLACEHOLDER-SVG" alt="Alert Image" /></div>
+    <a class="more">PLACEHOLDER-MORE-BUTTON</a>
+    <pre class="more-box">PLACEHOLDER-MORE-CONTENT</pre>
+    <script>
+      var more = document.querySelector('.more')
+      var moreBox = document.querySelector('.more-box')
+      function clickButton() {
+        more.style.display = 'none'
+        moreBox.style.display = 'block'
+      }
+      more.addEventListener('click', function () {
+        clickButton()
+      })
+
+      moreBox.addEventListener('click', function () {
+        if (moreBox.classList.contains('more-box-fullscreen')) {
+          moreBox.classList.remove('more-box-fullscreen')
+        } else {
+          moreBox.classList.add('more-box-fullscreen')
+        }
+      })
+    </script>
+    <!--PLACEHOLDER-SCRIPT-->
+  </body>
+</html>

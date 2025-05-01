@@ -1,0 +1,3 @@
+APP_STARTING: 'Sumor App iniciando...'
+APP_STARTED: 'Sumor App iniciado, ejecutándose en http://localhost:{port}'
+I18N_REGISTERED: 'i18n registrado para el espacio de nombres {namespace}'

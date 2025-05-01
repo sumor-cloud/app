@@ -1,0 +1,2 @@
+LOGIN_EXPIRED: '登陆已过期，请重新登录'
+PERMISSION_DENIED: '权限不足，缺少{permission}权限'

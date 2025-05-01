@@ -1,0 +1,3 @@
+API_ERROR_SHOW_MORE: 'Mostra più dettagli tecnici'
+API_ERROR_UNKNOWN_ERROR: 'Errore di interfaccia, riprova più tardi'
+API_ERROR_UNKNOWN_MESSAGE: "Errore di interfaccia, le informazioni dettagliate sull'errore sono disponibili di seguito. Percorso: {path}"

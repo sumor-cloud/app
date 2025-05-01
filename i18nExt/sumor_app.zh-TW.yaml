@@ -1,0 +1,3 @@
+APP_STARTING: 'Sumor 應用啟動中...'
+APP_STARTED: 'Sumor 應用已啟動，運行在 http://localhost:{port}'
+I18N_REGISTERED: 'i18n 已為命名空間 {namespace} 註冊'

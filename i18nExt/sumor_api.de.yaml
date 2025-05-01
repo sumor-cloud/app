@@ -1,0 +1,3 @@
+API_ERROR_SHOW_MORE: 'Mehr technische Details anzeigen'
+API_ERROR_UNKNOWN_ERROR: 'Schnittstellenfehler, bitte versuchen Sie es später erneut'
+API_ERROR_UNKNOWN_MESSAGE: 'Schnittstellenfehler, detaillierte Fehlerinformationen finden Sie unten. Pfad: {path}'

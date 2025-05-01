@@ -1,0 +1,47 @@
+/* 当浏览器设置为dark模式时生效 */
+a {
+  color: #2196f3;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  .quiet {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .low {
+    background: rgba(255, 87, 34, 0.5);
+  }
+  .high {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .medium {
+    background: rgba(255, 87, 34, 0.3);
+  }
+
+  .status-line.medium,
+  .medium .cover-fill {
+    background: rgb(255, 87, 34);
+  }
+  a {
+    color: #a9d9ff;
+  }
+  .coverage-summary th {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  thead tr {
+    border: 1px solid #bbb;
+  }
+  pre {
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+    .quiet {
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  pre a {
+    color: #2196f3;
+  }
+}
