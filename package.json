@@ -46,6 +46,14 @@
   "author": "Sumor Cloud",
   "license": "MIT",
   "description": "It generates a REST API from a YAML file using OpenAPI 3.0 and Express.js.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumor-cloud/app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumor-cloud/app/issues"
+  },
+  "homepage": "https://github.com/sumor-cloud/app#readme",
   "dependencies": {
     "axios": "^1.8.4",
     "body-parser": "^2.2.0",
