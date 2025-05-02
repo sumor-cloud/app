@@ -7,14 +7,12 @@ on:
     branches:
       - main
 jobs:
-  publish:
-    # 只在 CI workflow 成功时执行
+  check_tag:
     if: github.event.workflow_run.conclusion == 'success'
-    name: Publish to NPM
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    outputs:
+      has_tag: ${{ steps.check_tag.outputs.has_tag }}
+      tag: ${{ steps.check_tag.outputs.tag }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,15 +27,26 @@ jobs:
           else
             echo "has_tag=false" >> $GITHUB_OUTPUT
           fi
+
+  publish:
+    needs: check_tag
+    if: needs.check_tag.outputs.has_tag == 'true'
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       
       - name: Use Node.js
-        if: steps.check_tag.outputs.has_tag == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
+          
       - name: Publish to NPM
-        if: steps.check_tag.outputs.has_tag == 'true'
         run: |
           echo "Publishing version $(node -p "require('./package.json').version")"
           npm publish --access public
