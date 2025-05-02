@@ -33,10 +33,18 @@
     "publish-release-minor": "npm version minor && npm run push-tag",
     "publish-release-major": "npm version major && npm run push-tag"
   },
-  "keywords": [],
-  "author": "",
-  "license": "UNLICENSED",
-  "description": "",
+  "keywords": [
+    "sumor",
+    "openapi",
+    "swagger",
+    "rest",
+    "api",
+    "express",
+    "yaml"
+  ],
+  "author": "Sumor Cloud",
+  "license": "MIT",
+  "description": "It generates a REST API from a YAML file using OpenAPI 3.0 and Express.js.",
   "dependencies": {
     "axios": "^1.8.4",
     "body-parser": "^2.2.0",
