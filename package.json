@@ -11,7 +11,8 @@
     "i18nExt/",
     "modules/",
     "src/",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "demo": "cd demo && npm run start",
