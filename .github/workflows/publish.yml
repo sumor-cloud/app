@@ -1,57 +1,31 @@
 name: Publish
 on:
-  workflow_run:
-    workflows: ["CI"]
-    types:
-      - completed
-    branches:
-      - main
+  push:
+    tags:
+      - 'v*'
 jobs:
-  check_tag:
-    if: github.event.workflow_run.conclusion == 'success'
-    name: Check for Tag
-    runs-on: ubuntu-latest
-    continue-on-error: false
-    outputs:
-      has_tag: ${{ steps.check_tag.outputs.has_tag }}
-      tag: ${{ steps.check_tag.outputs.tag }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Check for tag
-        id: check_tag
-        run: |
-          git fetch --tags
-          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          if [ ! -z "$LATEST_TAG" ]; then
-            echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
-            echo "has_tag=true" >> $GITHUB_OUTPUT
-          else
-            echo "No tag found, skipping workflow" >&2
-            exit 1
-          fi
-
   publish:
-    needs: check_tag
-    if: needs.check_tag.outputs.has_tag == 'true'
     name: Publish to NPM
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-          
+      - name: Install NPM dependencies
+        run: npm ci
+      - name: Check dependencies size
+        run: du -sh node_modules
+      - name: Syntax specification checking using ESLint
+        run: npm run lint
+      - name: Run NPM audit
+        run: npm audit
+      - name: Unit test with coverage using Jest
+        run: npm test
       - name: Publish to NPM
-        run: |
-          echo "Publishing version $(node -p "require('./package.json').version")"
-          npm publish --access public
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
